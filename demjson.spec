@@ -4,7 +4,7 @@
 #
 Name     : demjson
 Version  : 2.2.3
-Release  : 11
+Release  : 12
 URL      : http://deron.meranda.us/python/demjson/dist/demjson-2.2.3.tar.gz
 Source0  : http://deron.meranda.us/python/demjson/dist/demjson-2.2.3.tar.gz
 Summary  : encoder, decoder, and lint/validator for JSON (JavaScript Object Notation) compliant with RFC 7159
