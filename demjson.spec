@@ -4,7 +4,7 @@
 #
 Name     : demjson
 Version  : 2.2.4
-Release  : 20
+Release  : 21
 URL      : http://deron.meranda.us/python/demjson/dist/demjson-2.2.4.tar.gz
 Source0  : http://deron.meranda.us/python/demjson/dist/demjson-2.2.4.tar.gz
 Summary  : encoder, decoder, and lint/validator for JSON (JavaScript Object Notation) compliant with RFC 7159
@@ -48,13 +48,16 @@ python components for the demjson package.
 %setup -q -n demjson-2.2.4
 
 %build
+export LANG=C
+export SOURCE_DATE_EPOCH=1484542048
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
+export SOURCE_DATE_EPOCH=1484542048
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files
 %defattr(-,root,root,-)
